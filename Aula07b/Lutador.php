@@ -24,20 +24,24 @@ class Lutador {
 
     //Métodos especiais
     public function apresentar(){
-        echo "<br>Lutador: " . $this->getNome() . " de " . $this->getIdade() . " anos";
+        echo "<p>------------------------------</p>";
+        echo "<br>" . $this->getNome() . 
+                " é um peso " . $this->getCategoria() .
+             " com " . $this->getVitorias() . " vitórias " . 
+                $this->getDerrotas() . " derrotas  e " . 
+                $this->getEmpates() . " empates.";
+    }
+    public function status(){
+        echo "<p>------------------------------</p>";
+        echo "<br>Lutador: " . $this->getNome();
+        echo "<br>Idade: " . $this->getIdade() . " anos";
         echo "<br>Origem: " . $this->getNacionalidade();
+        echo "<br>Categoria: " . $this->getCategoria();
         echo "<br>Medindo " . $this->getAltura() . " de altura";
         echo "<br>Pesando " . $this->getPeso() . "Kg";
         echo "<br>Ganhou: " . $this->getVitorias();
         echo "<br>Perdeu: " . $this->getDerrotas();
         echo "<br>Empatou: " . $this->getEmpates() . " lutas";
-    }
-    public function status(){
-        echo "<br>" . $this->getNome() . 
-                " é um peso " . $this->getCategoria() .
-             " com " . $this->getVitorias() . " vitórias " . 
-                $this->getDerrotas() . " derrotas  e " . 
-                $this->getEmpates() . " empates";
     }
     public function ganharLuta(){
         $this->setVitorias($this->getVitorias() + 1);
