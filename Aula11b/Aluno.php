@@ -5,7 +5,7 @@ class Aluno extends Pessoa{
     protected $curso;
     
     public function pagarMensal(){
-        
+        echo "<p>Pagando mensalidade do aluno $this->nome</p>";
     }
 
     public function getMatricula() {

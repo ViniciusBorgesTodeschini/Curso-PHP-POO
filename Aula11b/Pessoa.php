@@ -5,7 +5,7 @@ abstract class Pessoa {
     protected $sexo;
     
     public final function fazerAniviver(){
-        
+        $this->idade++;
     }
     
     function getNome() {
